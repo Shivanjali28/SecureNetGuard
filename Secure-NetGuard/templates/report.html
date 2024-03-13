@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Dashboard</title>
+    <link rel="stylesheet" href="/Secure-NetGuard/static/report.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Network Security Analysis</h1>
+        </header>
+        <main>
+            <section class="metrics">
+                <h2>Metrics</h2>
+                <ul>
+                    <li>
+                        <div class="metric-name">URL_Length</div>
+                        <div class="metric-value">85%</div>
+                    </li>
+                    <li>
+                        <div class="metric-name">Host_Length</div>
+                        <div class="metric-value">9.2</div>
+                    </li>
+                    <li>
+                        <div class="metric-name">FD_Length</div>
+                        <div class="metric-value">230</div>
+                    </li>
+                    <li>
+                        <div class="metric-name">Count_dir</div>
+                        <div class="metric-value">98%</div>
+                    </li>
+                    <li>
+                        <div class="metric-name">Count_of_embedded_domain</div>
+                        <div class="metric-value">92%</div>
+                    </li>
+                </ul>
+            </section>
+            <section class="scores">
+                <h2>Scores</h2>
+                <div class="score">
+                    <div class="score-label">Overall Security</div>
+                   
+                </div>
+                <div class="score">
+                    <div class="score-label">URL_Length</div>
+                    
+                </div>
+                <div class="score">
+                    <div class="score-label">Host_Length</div>
+                   
+                </div>
+                <div class="score">
+                    <div class="score-label">Count_of_embedded_domain</div>
+                  
+                </div>
+                <div class="score">
+                    <div class="score-label">Compliance</div>
+                    
+                </div>
+            </section>
+            <!-- Pie chart for scores -->
+            <section class="pie-chart">
+                <canvas id="score-chart"></canvas>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Scores data
+        var scoresData = {
+            labels: ['Overall Security', 'URL_Length', 'Host_Length', 'Count_of_embedded_domain', 'Compliance'],
+            datasets: [{
+                data: [85, 75, 80, 90, 95], // Sample scores data
+                backgroundColor: ['#007bff', '#ffc107', '#28a745', '#dc3545', '#17a2b8'], // Colors for each slice
+            }]
+        };
+
+        // Pie chart options
+        var pieChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+        };
+
+        // Get context and create pie chart
+        var scoreChartCanvas = document.getElementById('score-chart').getContext('2d');
+        var scoreChart = new Chart(scoreChartCanvas, {
+            type: 'pie',
+            data: scoresData,
+            options: pieChartOptions
+            
+        });
+    </script>
+</body>
+</html>

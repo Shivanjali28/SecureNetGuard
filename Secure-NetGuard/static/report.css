@@ -1,0 +1,80 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Container styles */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    bottom: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main styles */
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Section styles */
+section {
+    flex: 1;
+    background-color: #fff; /* White background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Metrics section styles */
+.metrics {
+    margin-right: 20px;
+}
+
+/* Scores section styles */
+.scores {
+    margin-left: 20px;
+}
+
+/* Heading styles */
+h1, h2 {
+    color: #333; /* Dark gray text color */
+}
+
+/* Metric styles */
+.metrics ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.metric-name {
+    font-weight: bold;
+    color: #007bff; /* Blue text color */
+}
+
+.metric-value {
+    color: #28a745; /* Green text color */
+}
+
+/* Score styles */
+.score {
+    margin-bottom: 10px;
+}
+
+.score-label {
+    font-weight: bold;
+}
+
+.score-value {
+    color: #dc3545; /* Red text color */
+    font-weight: bold;
+}
