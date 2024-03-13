@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL-CLASSIFICATION</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='builtin/logo-no-background.png') }}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="hero">
+        <video autoplay loop muted playsinline class="back-video">
+            <source src="{{ url_for('dynamic', filename='builtin/finalvideo.mp4')}}" type="video/mp4">
+        </video>
+        <nav>
+            <img src="{{ url_for('static', filename='builtin/logo-no-background.png') }}" class="logo">
+            <ul>
+                <li><a href="{{ url_for('contactus') }}">CONTACT US</a></li>
+                <li><a href="{{ url_for('help') }}">HELP</a></li>
+                <div class="blue-bar"></div>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Welcome To Your Safe World</h1>
+            <p class="quote">In today’s interconnected world, security is not an option; it's a necessity.</p>
+            <a href="{{ url_for('main') }}">Explore</a>
+        </div>
+    </div>
+</body>
+
+</html>
